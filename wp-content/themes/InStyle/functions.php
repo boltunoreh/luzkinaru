@@ -196,3 +196,55 @@ add_action('admin_enqueue_scripts', 'gavern_enqueue_admin_js_and_css');
 remove_action('wp_head', 'wp_generator');
 // EOF
 add_theme_support( 'woocommerce' );
+
+function imgs_to_galereya( $atts ){
+    $params = shortcode_atts( array(
+        'ids' => '',
+    ), $atts );
+
+    $ids = explode(',', str_replace(' ', '', $params['ids']));
+
+    $template_dir_path = get_template_directory_uri();
+
+    $html = "
+    <link rel=\"stylesheet\" href=\"{$template_dir_path}/galereya/css/jquery.galereya.css\">
+    <!--[if lt IE 9]>
+    <link rel=\"stylesheet\" href=\"{$template_dir_path}/galereya/css/jquery.galereya.ie.css\">
+    <![endif]-->
+    <style>
+        .galereya-top {
+            position: fixed;
+
+            background: #f6f6f6;
+            background: rgba(246, 246, 246, 0.7);
+        }
+    </style>
+    <div id=\"gal1\">
+    ";
+
+    foreach ($ids as $id) {
+        $img = wp_get_attachment_image($id, 'thumbnail', false, [
+            'data-desc' => 'desc',
+            'data-category' => 'food',
+            'data-fullsrc' => 'hui-tebe-a-ne-full',
+        ]);
+
+        $html .= $img;
+    }
+
+    $html .= "
+    </div>
+    <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js\"></script>
+    <script>window.jQuery || document.write('<script src=\"js/jquery-1.9.1.min.js\"><\/script>')</script>
+    <script src=\"{$template_dir_path}/galereya/js/jquery.galereya.min.js\"></script>
+    <script>
+        $(function () {
+            $('#gal1').galereya();
+        });
+    </script>
+    ";
+
+    return $html;
+}
+
+add_shortcode( 'galereya', 'imgs_to_galereya' );
