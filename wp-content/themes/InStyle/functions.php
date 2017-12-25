@@ -212,21 +212,18 @@ function imgs_to_galereya( $atts ){
     <link rel=\"stylesheet\" href=\"{$template_dir_path}/galereya/css/jquery.galereya.ie.css\">
     <![endif]-->
     <style>
-        .galereya-top {
-            position: fixed;
-
-            background: #f6f6f6;
-            background: rgba(246, 246, 246, 0.7);
-        }
+        .galereya-top { display: none; }
     </style>
     <div id=\"gal1\">
     ";
 
     foreach ($ids as $id) {
-        $img = wp_get_attachment_image($id, 'thumbnail', false, [
+        $imgFullsizeUrl = wp_get_attachment_image_url($id, 'full', false);
+
+        $img = wp_get_attachment_image($id, 'medium', false, [
             'data-desc' => 'desc',
             'data-category' => 'food',
-            'data-fullsrc' => 'hui-tebe-a-ne-full',
+            'data-fullsrc' => $imgFullsizeUrl,
         ]);
 
         $html .= $img;
