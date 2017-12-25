@@ -1,0 +1,87 @@
+/**
+ *
+ * -------------------------------------------
+ * Small Desktop CSS file
+ * -------------------------------------------
+ * 
+ **/
+ 
+/*
+ *
+ * 10. Small Desktop code
+ *
+ *
+------------------------------------ */
+ 
+/* 10.1. Base elements
+==================================== */ 
+
+.gk-page {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding-left: 10px!important;
+	padding-right: 10px!important;
+}
+
+#gk-footer {
+	text-align: center;
+}
+
+#footer-menu,
+#gk-footer .gk-copyrights {
+	clear: both;
+	display: block;
+	float: none!important;
+	margin: 10px auto;
+	overflow: hidden;
+	text-align: center;
+}
+#gk-footer .gk-copyrights small {
+	text-align: center;
+}
+#footer-menu {
+	display: inline-block;
+	margin-bottom: 0;
+}
+#gk-footer .gk-copyrights {
+	margin-top: 6px;
+}
+
+.gk-banner > h2 > a > span {
+	font-size: 30px;
+}
+.gk-banner > h2 {
+	font-size: 30px;
+	top: 100px;
+}
+
+.gk-is-wrapper-gk-instyle .figcaption h3 {
+	font-size: 56px;
+}
+
+.grid2 .gk-nsp-content-wrap,
+.grid3 .gk-nsp-content-wrap {
+	padding: 10px;
+}
+
+#gk-top-menu li {
+	margin: 0 10px;
+}
+
+#gk-top-menu li:before {
+	left: -9px;
+}
+
+#btn-cart {
+	margin-left: 10px;
+}
+
+#btn-cart:before {
+	margin-right: 8px;
+}
+
+#gk-menu-overlay-wrap {
+	margin: 0 0 0 -360px!important;
+	max-width: 720px!important;
+}

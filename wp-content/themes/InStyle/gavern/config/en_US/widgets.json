@@ -1,0 +1,133 @@
+[	
+	{
+		"name": "Top Bar",
+		"id": "top_bar",
+		"description": "Widgets area on the top bar of website",
+		"before_widget": "<div id=\"%1$s\" class=\"box %2$s\">",
+		"after_widget": "</div>",
+		"before_title": "",
+		"after_title": ""
+	},
+	{
+		"name": "User Area",
+		"id": "user_area",
+		"description": "Widgets area on the left side of the logo",
+		"before_widget": "",
+		"after_widget": "",
+		"before_title": "",
+		"after_title": ""
+	},
+	{
+		"name": "Top widgets I",
+		"id": "top1",
+		"description": "Widgets area on under the header of website",
+		"before_widget": "<div id=\"%1$s\" class=\"box %2$s\">",
+		"after_widget": "</div>",
+		"before_title": "<h3 class=\"box-title\">",
+		"after_title": "</h3>",
+		"amount": "4"
+	},
+	{
+		"name": "Top widgets II",
+		"id": "top2",
+		"description": "Widgets area on under the header of website",
+		"before_widget": "<div id=\"%1$s\" class=\"box %2$s\">",
+		"after_widget": "</div>",
+		"before_title": "<h3 class=\"box-title\">",
+		"after_title": "</h3>",
+		"amount": "4"
+	},
+	{
+		"name": "Sidebar",
+		"id": "sidebar",
+		"description": "Sidebar column",
+		"before_widget": "<div id=\"%1$s\" class=\"box %2$s\">",
+		"after_widget": "</div>",
+		"before_title": "<h3 class=\"box-title\">",
+		"after_title": "</h3>"
+	},	
+	{
+		"name": "Woocommerce Sidebar",
+		"id": "sidebar_wc",
+		"description": "Woocommerce sidebar column",
+		"before_widget": "<div id=\"%1$s\" class=\"box %2$s\"><div>",
+		"after_widget": "</div></div>",
+		"before_title": "<h3 class=\"box-title\"><span>",
+		"after_title": "</span></h3>"
+	},	
+	{
+		"name": "Mainbody Top",
+		"id": "mainbody_top",
+		"description": "Block directly over mainbody",
+		"before_widget": "<div id=\"%1$s\" class=\"box %2$s\">",
+		"after_widget": "</div>",
+		"before_title": "<h3 class=\"box-title\">",
+		"after_title": "</h3>"
+	},
+	{
+		"name": "Mainbody",
+		"id": "mainbody",
+		"description": "Widgets area used only if is enabled in the theme options instead of showing posts",
+		"before_widget": "<div id=\"%1$s\" class=\"box %2$s\">",
+		"after_widget": "</div>",
+		"before_title": "<h3 class=\"box-title\">",
+		"after_title": "</h3>"
+	},
+	{
+		"name": "Article inset",
+		"id": "inner_inset",
+		"description": "Article inset column",
+		"before_widget": "<div id=\"%1$s\" class=\"box %2$s\">",
+		"after_widget": "</div>",
+		"before_title": "<h3 class=\"box-title\">",
+		"after_title": "</h3>"
+	},	
+	{
+		"name": "Mainbody Bottom",
+		"id": "mainbody_bottom",
+		"description": "Block directly under mainbody",
+		"before_widget": "<div id=\"%1$s\" class=\"box %2$s\">",
+		"after_widget": "</div>",
+		"before_title": "<h3 class=\"box-title\">",
+		"after_title": "</h3>"
+	},
+	{
+		"name": "Bottom I widgets",
+		"id": "bottom1",
+		"description": "Widgets area over the footer area",
+		"before_widget": "<div id=\"%1$s\" class=\"box %2$s\">",
+		"after_widget": "</div>",
+		"before_title": "<h3 class=\"box-title\">",
+		"after_title": "</h3>",
+		"amount": "6"
+	},
+	{
+		"name": "Bottom II widgets",
+		"id": "bottom2",
+		"description": "Widgets area over the footer area",
+		"before_widget": "<div id=\"%1$s\" class=\"box %2$s\">",
+		"after_widget": "</div>",
+		"before_title": "<h3 class=\"box-title\">",
+		"after_title": "</h3>",
+		"amount": "6"
+	},
+	{
+		"name": "Bottom III widgets",
+		"id": "bottom3",
+		"description": "Widgets area over the footer area",
+		"before_widget": "<div id=\"%1$s\" class=\"box %2$s\">",
+		"after_widget": "</div>",
+		"before_title": "<h3 class=\"box-title\">",
+		"after_title": "</h3>",
+		"amount": "6"
+	},
+	{
+		"name": "Cart",
+		"id": "cart",
+		"description": "Widgets area in the cart popup",
+		"before_widget": "",
+		"after_widget": "",
+		"before_title": "<h3 class=\"box-title\">",
+		"after_title": "</h3>"
+	}
+]

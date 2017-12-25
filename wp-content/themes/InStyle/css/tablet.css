@@ -1,0 +1,337 @@
+/**
+ *
+ * -------------------------------------------
+ * Tablet CSS file
+ * -------------------------------------------
+ * 
+ **/
+ 
+/*
+ *
+ * 11. Tablet code
+ *
+ *
+------------------------------------ */
+ 
+/* 11.1. Base elements
+==================================== */ 
+
+body,
+.box {
+	font-size: 14px;
+}
+
+small {
+	font-size: 90%;
+}
+
+.gk-page {
+	padding-left: 15px!important;
+	padding-right: 15px!important;
+}
+
+#gk-mainbody {
+	margin-bottom: 30px;
+}
+
+/* sidebar */
+#gk-mainbody-columns {
+	display: block;
+}
+
+#gk-mainbody-columns > section,
+#gk-mainbody-columns > aside {
+	display: block;
+	overflow: hidden;
+	width: 100%!important;
+}
+
+#gk-mainbody-columns > section {
+	margin-top: 20px;
+}
+
+/* Archive page */
+.archivepage .widget.first {
+	margin-right: 2%;
+	margin-left: 0!important;
+}
+
+.archivepage .widget.first,
+.archivepage .widget.first + .widget {
+	margin-right: 0;
+	margin-left: 2%;
+	width: 48%;
+}
+
+.archivepage .widget.last {
+	margin: 0;
+	width: 100%;
+}
+
+.archivepage .widget ul {
+	margin-bottom: 30px;
+}
+
+/* images fix */
+#gk-mainbody img {
+	height: auto!important;
+	max-width: 100%!important;
+}
+
+/* column rules */
+#gk-sidebar .box,
+#gk-sidebar_wc .box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	float: left;
+	margin-top: 0!important;
+	margin-bottom: 30px!important;
+	padding: 10px!important;
+	width: 50%;
+}
+#gk-sidebar,
+#gk-sidebar_wc {
+	padding: 0!important;
+}
+#gk-sidebar .box:first-child,
+#gk-sidebar_wc .box:first-child {
+	padding-top: 10px!important;
+}
+#gk-sidebar .box:nth-child(2n+1),
+#gk-sidebar_wc .box:nth-child(2n+1) {
+	clear: both!important;
+}
+.widget-area .col1 { width: 100%; }
+.widget-area .col2 { width: 50%; }
+.widget-area .col3 { width: 33.3%; }
+.widget-area .col4 { width: 50%; }
+.widget-area .col5 { width: 33.3%; }
+.widget-area .col6 { width: 33.3%; }
+
+.widget-area .box.last1 { width: 100%; }
+.widget-area .box.last2 { width: 50%; }
+.widget-area .box.last3 { width: 33.3%; }
+.widget-area .box.last4 { width: 50%; }
+.widget-area .box.last5 { width: 33.3%; }
+
+.widget-area .nth1 {
+	clear: both;
+}
+
+.widget-area .col6.last5.nth4,
+.widget-area .col6.last5.nth5 {
+	width: 50%;
+}
+ 
+#gk-bottom3 {
+	margin: 70px 0;
+	padding-left: 10px!important;
+	padding-right: 10px!important;
+}
+
+#gk-bottom6 {
+	padding: 60px 0;
+}
+
+.gk-columns[data-column-count="4"] > div,
+.gk-columns[data-column-count="5"] > div {
+	margin-bottom: 30px;
+	width: 50%!important; 
+}
+
+.gk-columns[data-column-count="4"] > div:nth-child(2n+1),
+.gk-columns[data-column-count="5"] > div:nth-child(2n+1) {
+	clear: both;
+}
+
+#gk-mainbody article > header h1,
+#gk-mainbody article > header h2 {
+	font-size: 32px;
+}
+
+#gk-inset {
+	padding-left: 25px;
+}
+
+body.gk-inset-left #gk-mainbody > article .content + #gk-inset {
+	padding-left: 0;
+	padding-right: 25px;
+}
+
+#gk-inset .box {
+	padding-top: 20px;
+}
+
+/* 11.2. Header elements
+==================================== */
+#gk-head {
+	margin-bottom: 20px;
+}
+#gk-top-menu,
+#gk-user-area,
+#gk-top-right {
+	margin-top: 0;
+}
+
+#gk-top-right {
+	margin-top: 7px;
+}
+
+/* 11.3. Demo and other elements
+==================================== */
+
+.gk-banner > a > img {
+	width: 100%;
+}
+
+#form-wysija-2 > p {
+	width: 67%;
+}
+
+.box #searchform:after {
+	right: 25px;
+	top: 15px;
+}
+
+/* 11.4. Main menu elements
+==================================== */ 
+
+#main-menu,
+#gk-main-menu {
+	display: none;
+}
+
+#main-menu.gk-menu-overlay,
+#gk-main-menu.gk-menu-overlay {
+	display: block!important;
+	width: 100%;
+}
+
+#main-menu-mobile {
+	color: #111;
+	display: block!important;
+	float: right;
+	font-size: 32px;
+	height: 44px;
+	line-height: 44px;
+	margin: 53px 0 10px 0!important;
+	overflow: hidden;
+	position: relative;
+	width: 44px;
+}
+
+#main-menu-mobile i {
+	margin-right: -14px;
+}
+
+#main-menu-mobile > select {
+	border: none;	
+	display: block;
+	width: 44px!important;
+	height: 44px!important;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	opacity: 0;
+	padding: 6px!important;
+	position: absolute!important;
+	right: 4px;
+	font-size: 14px;
+	top: 0;
+}
+
+body[data-mobile="true"] #main-menu-mobile > select {
+	font-size: 50px;
+}
+
+/* 11.5. Footer
+==================================== */ 
+
+
+/* 11.6. Device classes
+==================================== */
+
+.onlyDesktop {
+	display: none!important;
+}
+
+.onlyTablets {
+	display: block!important;
+}
+
+.onlySmartphones {
+	display: none!important;
+}
+
+.onlyTabltetsAndSmartphones {
+	display: block!important;
+}
+
+/* 11.7. Responsive tables
+==================================== */
+
+@media (max-width: 600px) {
+	article section table:not(.woocommerce) {
+		border: 1px solid #eee;
+		border-bottom: none;
+		max-width: 100%!important;
+		width: 100%!important;
+	}
+
+	article section table thead {
+		display: none;
+	}
+
+	article section table:not(.woocommerce) td {
+		border-top: 1px solid #eee;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		clear: both;
+		display: block;
+		float: right;
+		padding: 5px 5px 5px 43%!important;
+		position: relative;
+		width: 100%;
+	}
+
+	article section table td:first-child {
+		border-top: none;
+	}
+
+	article section table:not(.woocommerce) tbody tr {
+		border-bottom: 2px solid #eee;
+	}
+
+	article section table td span.gk-table-label {
+		display: block;
+		font-size: 95%;
+		font-weight: bold;
+		left: 5px;
+		position: absolute;
+	}
+}
+
+/* 11.8. Woocommerce
+==================================== */
+
+table.shop_table td {
+	border-left: 0;
+	border-right: 0;
+}
+
+article section .woocommerce table tbody tr {
+	border: 0;
+}
+
+article section .woocommerce table {
+	border: 0;
+}
+
+article section .woocommerce table td:first-child {
+	border-top: 1px solid #eee;
+}
+
+.attachment-shop_thumbnail {
+	width: auto!important;
+}

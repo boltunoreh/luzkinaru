@@ -1,0 +1,154 @@
+/**
+ *
+ * -------------------------------------------
+ * Small Tablet CSS file
+ * -------------------------------------------
+ * 
+ **/
+ 
+/*
+ *
+ * 12. Small Tablet code
+ *
+ *
+------------------------------------ */
+ 
+/* 12.1. Base elements
+==================================== */ 
+
+.gk-page {
+	padding-left: 20px!important;
+	padding-right: 20px!important;
+}
+#gk-mainbody article > header h1, 
+#gk-mainbody article > header h2 {
+	font-size: 32px;
+	line-height: 32px;
+}
+
+#gk-main-menu.gk-menu-overlay {
+	border: 0;
+}
+
+#main-menu.gk-menu-overlay {
+	height: auto;
+	min-height: 21px;
+}
+
+#gk-menu-overlay-wrap {
+	margin: -20px 0 0 -260px!important;
+	max-width: 520px!important;
+}
+
+#gk-menu-overlay.open {
+	margin-top: 0;
+}
+
+#gk-menu-overlay-content li {
+	font-size: 20px;
+}
+#gk-menu-overlay-content li,
+#gk-menu-overlay-content li a {
+	line-height: 58px;
+}
+
+#gk-bottom1 .box.double,
+#gk-bottom1 .box.double ~ .box,
+#gk-bottom2 .box.double,
+#gk-bottom2 .box.double ~ .box,
+#gk-bottom3 .box.double,
+#gk-bottom3 .box.double ~ .box {
+	width: 50%!important;
+}
+
+.gk-columns[data-column-count="2"] > div,
+.gk-columns[data-column-count="3"] > div,
+.gk-columns[data-column-count="4"] > div {
+	padding-bottom: 20px!important;
+	width: 100%;
+}
+
+#gk-top-nav {
+	text-align: center;
+}
+#gk-user-area {
+	display: block;
+	float: none;
+	margin: 10px 0;
+	text-align: center;
+	width: 100%;
+}
+
+#gk-top-right {
+	display: inline-block;
+	float: none;
+	text-align: center;
+}
+
+#gk-top-right ul {
+	display: inline-block;
+}
+
+#gk-mainbody-columns > section {
+	margin-top: 5px;
+}
+
+.gk-banner > strong {
+	bottom: 14px;
+	font-size: 12px;
+}
+.gk-banner > h2 {
+	font-size: 32px;
+	top: 42px;
+}
+.gk-banner > h2 > a > span {
+	font-size: 32px;
+}
+
+.gk-is-wrapper-gk-instyle .figcaption h3 {
+	font-size: 42px;
+}
+
+.gk-is-wrapper-gk-instyle .figcaption p {
+	font-size: 14px;
+}
+
+.box.products .gk-nsp-header {
+	font-size: 12px;
+	max-width: 62%;
+}
+
+.box.products .gk-nsp-art .gk-nsp-info a,
+.box.products .gk-nsp-art .gk-nsp-info span,
+.box.products .gk-nsp-art .gk-nsp-price span.amount {
+	font-size: 10px;
+}
+
+.grid2 .gk-nsp-content-wrap,
+.grid3 .gk-nsp-content-wrap {
+	padding: 0 10px;
+}
+
+#gallery figcaption {
+	padding: 15px!important;
+}
+
+#gallery figcaption h3 {
+	font-size: 16px!important;
+}
+
+#gallery figcaption p,
+#gallery figcaption {
+	font-size: 12px!important;
+}
+
+/* woocommerce */
+.woocommerce h1,
+.price .amount {
+	font-size: 32px;
+}
+
+.price-text {
+	font-size: 14px;
+}
+

@@ -1,0 +1,18 @@
+{
+	"template": {
+		"name": "InStyle",
+		"update_name": "gk_instyle_wp",
+		"date": "20/12/2013",
+		"version": "1.0",
+		"description": "A Premium eCommerce, responsive GavickPro Wordpress theme based on the GavernWP framework"
+	},
+	"developer_config": {
+		"visibility": {
+			"template_options": true,
+			"importexport": true,
+			"updates": true,
+			"documentation": true,
+			"gavickpro_website": true
+		}
+	}
+}

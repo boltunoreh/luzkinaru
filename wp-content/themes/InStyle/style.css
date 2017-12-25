@@ -1,0 +1,42 @@
+/*
+Theme Name: InStyle
+Theme URI: http://gavick.com
+Description: InStyle is a premium eCommerce WordPress theme that will help you to create recognizable online store. Provide your exceptional webstore with the stunning, up-to-date presence it deserves with our inStyle theme. Its clean, stylish design makes it perfect as a sales platform for whatever products you wish.
+License: GNU GPL v.2.0
+License URI: LICENSE.txt
+Version: 1.0 (based on GavernWP 1.9.1)
+Author: GavickPro
+Author URI: http://gavick.com
+Tags: gray, two-columns, fluid-layout, responsive-layout
+*/
+
+/**
+ *
+ * Basic code convention:
+ *
+ * sel {
+ * // rules in the alphabetic order
+ * }
+ *
+ * Content of the CSS files
+ * 
+ * 0. Normalize CSS styles (normalize.css)
+ * 1. Global elements (template.css)
+ * 2. Template containers (template.css)
+ * 3. Template structure (template.css) 
+ * 4. Widget styles (template.css)
+ * 5. Wordpress elements styling (wp.css)
+ * 6. Shortcodes (shortcodes.*.css)
+ * 7. Template additional features styles (stuff.css)
+ * 8. Additional WP extensions styles (wp.extensions.css)
+ * 9. (optional) Additional 3rd party extensions styles (extensions.css)
+ * 10. Small desktop code (desktop.small.css)
+ * 11. Tablet code (tablet.css)
+ * 12. Small Tablet code (tablet.small.css)
+ * 13. Mobile code (mobile.css)
+ * 14. IE code fixes (ie*.css)
+ * 15. Template colours and styles (style*.css)
+ * 16. (optional) Override for all CSS files (override.css)
+ **/
+
+.sidebar-menu ul ul { border-top: 0; }

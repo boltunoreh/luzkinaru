@@ -1,0 +1,567 @@
+/**
+ *
+ * -------------------------------------------
+ * Mobile CSS file
+ * -------------------------------------------
+ * 
+ **/
+ 
+/*
+ *
+ * 13. Mobile code
+ *
+ *
+------------------------------------ */
+ 
+/* 13.1. Base elements
+==================================== */ 
+#gk-top-bar {
+	display: none;
+}
+
+#main-menu-mobile {
+	margin-top: 35px!important;
+}
+
+.page-title {
+	font-size: 32px;
+}
+
+#gk-head {
+	margin-bottom: 20px;
+}
+
+#gk-top-menu li:before,
+#btn-cart:before {
+	display: none;
+}
+
+#btn-cart {
+	margin-left: 19px;
+}
+
+#gk-mainbody-columns > section {
+	margin-top: 0px;
+}
+
+a.textLogo {
+	margin: 0;
+}
+
+a.cssLogo {
+	margin-top: 14px!important;
+}
+
+/* archive / page 404 */
+.page404 .widget,
+.archivepage .widget {
+	margin: 0!important;
+	width: 100%!important;
+}
+
+/* images fix */
+#gk-mainbody img {
+	height: auto!important;
+	max-width: 100%!important;
+}
+
+/* column rules */
+#gk-sidebar,
+#gk-sidebar_wc {
+	padding: 20px 0!important;
+}
+
+#gk-sidebar .box,
+#gk-sidebar_wc .box {
+	float: none!important;
+	margin: 0 auto!important;
+	max-width: 300px;
+	width: 100%!important;
+}
+
+#gk-bottom1 .box,
+#gk-bottom2 .box,
+#gk-bottom3 .box  {
+	margin-bottom: 20px;	
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+#gk-sidebar .box {
+	float: none;
+	margin-top: 0!important;
+	margin-bottom: 12px!important;
+	width: 100%;
+}
+
+#gk-sidebar .box:nth-child(2n+1) {
+	clear: both!important;
+}
+
+#gk-sidebar .box:nth-child(odd) {
+	padding-right: 0px;	
+}
+
+#gk-sidebar .box:nth-child(even) {
+	padding-left: 0px;
+}
+
+.widget-area .col1,
+.widget-area .col2,
+.widget-area .col3,
+.widget-area .col4,
+.widget-area .col5,
+.widget-area .col6,
+.widget-area .box.last1,
+.widget-area .box.last2,
+.widget-area .box.last3,
+.widget-area .box.last4,
+.widget-area .box.last5 { 
+	float: none!important;
+	margin: 0 auto 20px auto!important; 
+	max-width: 300px; 
+	width: 100%!important; 
+}
+
+#gk-top1 .box,
+#gk-top2 .box {
+	max-width: 100%!important;
+}
+
+.widget-area .nth1,
+.widget-area .nth2,
+.widget-area .nth3,
+.widget-area .nth4,
+.widget-area .nth5,
+.widget-area .nth6 {
+	clear: both;
+}
+
+body #gk-page .box {
+	margin-bottom: 20px!important;
+}
+
+#footer-menu li {
+	float: none;
+}
+
+#gk-bottom3 .gk-columns {
+	margin: 0!important;
+}
+
+#gk-bottom3 .box {
+	padding: 0;
+}
+
+.gk-columns > div {
+	padding: 0!important;
+	padding-bottom: 20px!important;
+	width: 100%!important;
+}
+
+/* Overlay menu */
+#gk-menu-overlay-wrap {
+    margin: 0 0 0 -150px!important;
+    max-width: 300px!important;
+}
+
+#gk-menu-overlay.open {
+    margin-top: 0!important;
+}
+
+#gk-menu-overlay-content li {
+    font-size: 15px;
+}
+
+#gk-menu-overlay-content li,
+#gk-menu-overlay-content li a{
+    line-height: 38px;
+}
+
+#gk-menu-overlay-header {
+    font-size: 36px;
+    line-height: 72px;
+}
+
+#gk-menu-overlay-close {
+    font-size: 20px;
+    line-height: 72px;        
+}
+
+#gallery figcaption {
+	display: none;
+}
+
+#gallery ol li {
+	height: 9px!important;
+	width: 9px!important;
+}
+
+/* 13.2. Header and demo elements
+==================================== */
+
+
+/* 13.3. Posts
+==================================== */
+
+#gk-mainbody > article .content {
+	width: 100%!important;
+}
+
+#gk-inset {
+	padding: 0!important;
+	width: 100%!important;
+}
+
+#gk-mainbody article > header h1 {
+	line-height: 32px;
+	padding: 18px 0 0px;
+}
+
+#gk-mainbody article > header {
+	margin-bottom: 10px;
+}
+
+#gk-mainbody article > header h1, 
+#gk-mainbody article > header h2 {
+	font-size: 24px;
+}
+
+h1 {
+	font-size: 28px;
+}
+
+h2, 
+.pagetitle {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 16px;
+}
+
+h6 {
+	font-size: 14px;
+}
+
+section#comments,
+section#respond {
+	margin-left: 0!important;
+}
+
+#comments li article > aside {
+	float: left;
+	margin-bottom: 10px;
+	margin-left: 0;
+	margin-right: 10px;
+	position: static!important;
+}
+
+#comments article .author {
+	float: none;
+	margin-top: 5px;
+}
+
+.author-info > aside {
+	margin: 0 0 30px 0;
+	position: static;
+}
+
+.author-info > div {
+	clear: both;
+	padding: 0;
+}
+
+article {
+	padding-left: 0!important;
+}
+
+aside.meta {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 20px 0!important;
+	position: static!important;
+	width: 100%!important;
+}
+
+#comments article header > * {
+	clear: both;
+	display: block;
+	float: left;
+	margin: 5px 0!important;
+	width: 100%;
+}
+
+#comments li article > .content {
+	margin-left: 0!important;
+	padding-left: 0!important;
+}
+
+#comments > h2:first-child,
+#respond > h3 {
+	font-size: 30px;
+	padding: 30px 0 0;
+}
+
+#gk-mainbody article > header h1, 
+#gk-mainbody article > header h2 {
+	font-size: 24px!important;
+	line-height: 1.2;
+}
+
+#comments li article {
+	padding: 8px 12px 5px 12px;
+}
+
+#comments li article > .content p {
+	font-size: 13px;
+}
+
+.tag-page > article, 
+.search-page > article {
+	padding: 0!important;
+	width: 100%!important;
+}
+
+.category-page article,
+.archive article {
+	padding-top: 10px!important;
+}
+
+/* 13.4. Other elements
+==================================== */
+/* Popups */
+.gk-popup {
+	margin-left: -150px;
+	width: 300px;
+}
+
+.gk-popup-wrap {
+	padding: 15px;
+}
+
+.gk-popup h3 {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 24px;
+	margin: 0 0 10px;
+}
+
+#gk-popup-cart .cart_list li > div {
+	margin-left: 80px;
+}
+
+.gk-nsp .gk-nsp-art {
+	border-top: 1px solid #eee!important;
+	border-left: none!important;
+	padding-bottom: 20px!important;
+	padding-top: 20px!important;
+	width: 100%!important;
+}
+.gk-nsp .gk-nsp-art:first-child {
+	border-top: none!important;
+}
+
+.gk-nsp-arts,
+.gk-nsp-links-wrap {
+	clear: both;
+	float: left!important;
+	width: 100%!important;
+}
+
+body .gk-columns.big-spaces > div {
+	padding: 0 110px!important;
+}
+
+body .gk-columns[data-column-count="2"] > div,
+body .gk-columns[data-column-count="3"] > div,
+body .gk-columns[data-column-count="4"] > div {
+	padding-bottom: 20px!important;
+	width: 100%!important;
+}
+
+/* IS */
+.gk-is-wrapper-gk-instyle .figcaption h3 {
+	font-size: 36px;
+	line-height: 0.7;
+}
+
+.gk-is-wrapper-gk-instyle ol {
+	display: none;
+}
+
+#gk-bottom1 .box.double,
+#gk-bottom1 .box.double ~ .box,
+#gk-bottom2 .box.double,
+#gk-bottom2 .box.double ~ .box,
+#gk-bottom3 .box.double,
+#gk-bottom3 .box.double ~ .box {
+	width: 100%!important;
+}
+
+/* 13.5. WooCommerce
+==================================== */
+
+.woocommerce-ordering {
+	text-align: center;
+	width: 100%;
+}
+
+.woocommerce .panel.entry-content {
+	border-top: 0;
+}
+
+.related ul.products li.product, 
+.related ul li.product, 
+.upsells.products ul.products li.product, 
+.upsells.products ul li.product,
+ul.products li.product {
+	clear: both;
+	float: none;
+	margin: 10px 0;
+	width: 100%!important;
+}
+
+div.product div.images,
+#content div.product div.images,
+div.product div.summary, 
+#content div.product div.summary {
+	clear: both;
+	float: none;
+	margin: 10px 0;
+	width: 100%!important;	
+}
+
+div.product .woocommerce-tabs ul.tabs, 
+#content div.product .woocommerce-tabs ul.tabs {
+	border: 1px solid #e5e5e5;
+	border-bottom: none;
+	margin: 20px 0 0 0;
+	padding: 0;
+}
+
+.woocommerce-tabs {
+	overflow: hidden;
+}
+
+div.product .woocommerce-tabs ul.tabs li, 
+#content div.product .woocommerce-tabs ul.tabs li {
+	border: none!important;
+	border-bottom: 1px solid #e5e5e5!important;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+	width: 100%;
+}
+
+#reviews #comments ol.commentlist .comment-text {
+	padding: 0;
+}
+
+div.product .woocommerce-tabs ul.tabs li a, 
+#content div.product .woocommerce-tabs ul.tabs li a {
+	display: block;
+	padding: 5px 0;
+}
+
+table.cart td.actions .coupon .input-text,
+#content table.cart td.actions .coupon .input-text,
+table.cart td.actions .checkout-button,
+#content table.cart td.actions .checkout-button {
+	display: block;
+	margin: 10px 5px 10px 5px;
+}
+
+table.cart td.actions .checkout-button,
+#content table.cart td.actions .checkout-button {
+	float: left;
+}
+
+input[name="update_cart"],
+div.coupon input[name="apply_coupon"] {
+	margin: 10px 5px 0 5px;
+}
+
+input[name="update_cart"] {
+	float: left;
+}
+
+table.cart td.actions,
+#content table.cart td.actions,
+.my_account_orders td.order-actions {
+	overflow: hidden;
+	padding: 0;
+	text-align: right;
+}
+
+table.cart td.actions,
+#content table.cart td.actions {
+	margin-top: 10px;
+	padding-left: 0!important;
+}
+
+.my_account_orders td.order-actions {
+	padding: 6px 0;
+}
+
+table.shop_attributes th {
+	text-align: left;
+	width: 42%;
+}
+
+.cart-collaterals .cross-sells,
+.cart-collaterals .cart_totals {
+	float: none;
+	width: 100%;
+}
+
+.cart-collaterals .cross-sells ul.products li {
+	width: 90%!important;
+}
+
+.cart-collaterals .shipping_calculator {
+	width: 100%;
+}
+
+.col2-set .col-1,
+.col2-set .col-2 {
+	float: none;
+	width: 100%;
+}
+
+.woocommerce-result-count {
+	float: none;
+}
+
+#reviews #comments ol.commentlist li img {
+	margin: 10px 20px;
+}
+
+/* 13.6. Device classes
+==================================== */
+
+.onlyDesktop {
+	display: none!important;
+}
+
+.onlyTablets {
+	display: none!important;
+}
+
+.onlySmartphones {
+	display: block!important;
+}
+
+.onlyTabltetsAndSmartphones {
+	display: block!important;
+}

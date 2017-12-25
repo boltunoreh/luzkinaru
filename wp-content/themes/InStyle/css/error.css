@@ -1,0 +1,120 @@
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Raleway Light'), local('Raleway-Light'), url(http://themes.googleusercontent.com/static/fonts/raleway/v6/-_Ctzj9b56b8RgXW8FArib3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Qwigley';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Qwigley'), local('Qwigley-Regular'), url(http://themes.googleusercontent.com/static/fonts/qwigley/v4/joDmWpghvET3_jzK0vhAUgLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+html {
+	height: 100%;
+}
+body,
+html {
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+}
+body {
+	background-size: cover;
+	font-family: 'Raleway', Arial, sans-serif;
+	min-height: 100%;
+	font-size: 16px;
+	line-height: 2;
+	color: #777;
+	padding: 0;
+	font-weight: 300;
+	word-wrap: break-word;
+}	
+a {
+	color: #b06339;
+	-webkit-transition: background 0.3s cubic-bezier(.17,.67,.88,1.25), color 0.2s linear;
+	   -moz-transition: background 0.3s cubic-bezier(.17,.67,.88,1.25), color 0.2s linear;
+	     -o-transition: background 0.3s cubic-bezier(.17,.67,.88,1.25), color 0.2s linear;
+	        transition: background 0.3s cubic-bezier(.17,.67,.88,1.25), color 0.2s linear;
+	text-decoration: none;
+}
+a:active,
+a:focus,
+a:hover {
+	color: #111;
+	text-decoration: none;
+}
+#gk-page-top {
+	text-align: center;
+	width: 100%;
+}
+#gk-page-wrap {
+	background: transparent;
+	clear: both;
+	padding: 0 0 30px 0;
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Qwigley', cursive;
+	font-size: 150px;
+	line-height: 1;
+	font-weight: 300;
+	color: #b06339;
+	margin: 75px 0 0;
+	padding: 0;
+}
+a.cssLogo {
+	height: 100px;
+	margin: 24px 30px 0 0;
+	padding: 0;
+	text-indent: -999em;
+	text-shadow: none;
+	width: 159px;
+	display: inline-block;
+}
+
+a.cssLogo {
+	background: transparent url('../images/logo.png') no-repeat 0 0;
+	/* You can specify there logo size and background */
+	height: 100px;
+	width: 159px;
+}
+
+a.textLogo {
+	color: #000;
+	display: block;
+	font-family: 'Qwigley';
+	font-size: 92px;
+	line-height: 100px;
+	height: auto;
+	margin: 26px 0 0 0;
+	overflow: hidden;
+	padding: 10px 5px;
+	text-indent: 0;
+	width: auto;
+}
+
+a.textLogo small {
+	color: #444;
+	display: block;
+	font-size: 28px;
+	line-height: 32px;
+	text-align: center;
+}
+p {
+	color: #555;
+	font-size: 20px;
+	line-height: 1.2;
+	font-weight: 300;
+	margin: 10px 0 24px 0;
+	padding: 0;
+}
+p.errorinfo {
+	font-size: 14px;
+	line-height: 1.6;
+	margin: 0 auto;
+	padding: 9px 0;
+	text-align: center;
+}
