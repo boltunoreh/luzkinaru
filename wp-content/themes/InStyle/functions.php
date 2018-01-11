@@ -244,7 +244,8 @@ HTML;
     // init Masonry
     var grid = $('.grid').masonry({
         itemSelector: '.grid-item',
-        columnWidth: 300,
+        columnWidth: '.grid-sizer',
+        percentPosition: true,
         fitWidth: true,
         stagger: 30,
         gutter: 5

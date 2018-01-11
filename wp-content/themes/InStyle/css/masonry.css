@@ -19,6 +19,22 @@
     margin-bottom: 5px;
 }
 
+@media screen and (max-width: 320px) {
+    .grid-sizer,
+    .grid-item {
+        width: 136px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .grid-sizer,
+    .grid-item {
+        width: 150px;
+        margin-bottom: 5px;
+    }
+}
+
 .grid-item {
     float: left;
 }
