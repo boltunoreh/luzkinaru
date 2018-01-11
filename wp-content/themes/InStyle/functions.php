@@ -197,51 +197,75 @@ remove_action('wp_head', 'wp_generator');
 // EOF
 add_theme_support( 'woocommerce' );
 
-function imgs_to_galereya( $atts ){
+function portfolio_jquery() {
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js');
+    wp_enqueue_script('jquery');
+}
+add_action('wp_enqueue_scripts', 'portfolio_jquery');
+
+function portfolio_js_css() {
+    wp_deregister_script('masonry');
+    wp_deregister_script('imagesloaded');
+
+    wp_enqueue_style( 'masonry', get_template_directory_uri() . '/css/masonry.css');
+    wp_enqueue_style( 'lightbox', get_template_directory_uri() . '/js/lightbox-2/src/css/lightbox.css');
+
+    wp_enqueue_script( 'masonry', get_template_directory_uri() . '/js/masonry.pkgd.min.js', array('jquery'));
+    wp_enqueue_script( 'imagesloaded', get_template_directory_uri() . '/js/imagesloaded.pkgd.js', array('masonry'));
+
+    wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/js/lightbox-2/src/js/lightbox.js', array('jquery'));
+}
+add_action( 'wp_enqueue_scripts', 'portfolio_js_css');
+
+function imgs_to_masonry( $atts ){
     $params = shortcode_atts( array(
         'ids' => '',
     ), $atts );
 
     $ids = explode(',', str_replace(' ', '', $params['ids']));
 
-    $template_dir_path = get_template_directory_uri();
-
-    $html = "
-    <link rel=\"stylesheet\" href=\"{$template_dir_path}/galereya/css/jquery.galereya.css\">
-    <!--[if lt IE 9]>
-    <link rel=\"stylesheet\" href=\"{$template_dir_path}/galereya/css/jquery.galereya.ie.css\">
-    <![endif]-->
-    <style>
-        .galereya-top { display: none; }
-    </style>
-    <div id=\"gal1\">
-    ";
+    $html = <<<HTML
+<div class="grid">
+    <div class="grid-sizer"></div>
+HTML;
 
     foreach ($ids as $id) {
         $imgFullsizeUrl = wp_get_attachment_image_url($id, 'full', false);
 
-        $img = wp_get_attachment_image($id, 'medium', false, [
-            'data-desc' => 'desc',
-            'data-category' => 'food',
-            'data-fullsrc' => $imgFullsizeUrl,
-        ]);
+        $imgUrl = wp_get_attachment_image_url($id, 'medium', false);
 
-        $html .= $img;
+        $html .= '<div class="grid-item"><a href="' . $imgUrl . '" data-lightbox=”portfolio″><img src="' . $imgUrl . '"></a></div>';
     }
 
-    $html .= "
-    </div>
-    <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js\"></script>
-    <script>window.jQuery || document.write('<script src=\"js/jquery-1.9.1.min.js\"><\/script>')</script>
-    <script src=\"{$template_dir_path}/galereya/js/jquery.galereya.min.js\"></script>
-    <script>
-        $(function () {
-            $('#gal1').galereya();
-        });
-    </script>
-    ";
+    $html .= <<<HTML
+</div>
+<script>
+    // init Masonry
+    var grid = $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: 300,
+        fitWidth: true,
+        stagger: 30,
+        gutter: 5
+    });
+    // layout Masonry after each image loads
+    grid.imagesLoaded().progress(function () {
+        grid.masonry();
+    });
+</script>
+<script>
+    lightbox.option({
+      'fadeDuration': 200,
+      'imageFadeDuration': 200,
+      'resizeDuration': 100,
+      'wrapAround': true,
+      'showImageNumberLabel': false
+    })
+</script>
+HTML;
 
     return $html;
 }
 
-add_shortcode( 'galereya', 'imgs_to_galereya' );
+add_shortcode( 'masonry', 'imgs_to_masonry' );
