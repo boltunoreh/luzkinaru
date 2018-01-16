@@ -43,3 +43,9 @@
     display: block;
     max-width: 100%;
 }
+
+/* LIGHTBOX */
+.lb-image {
+    border: 0 !important;
+    border-radius: 0 !important;
+}

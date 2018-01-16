@@ -235,7 +235,7 @@ HTML;
 
         $imgUrl = wp_get_attachment_image_url($id, 'medium', false);
 
-        $html .= '<div class="grid-item"><a href="' . $imgUrl . '" data-lightbox=”portfolio″><img src="' . $imgUrl . '"></a></div>';
+        $html .= '<div class="grid-item"><a href="' . $imgFullsizeUrl . '" data-lightbox=”portfolio″><img src="' . $imgUrl . '"></a></div>';
     }
 
     $html .= <<<HTML
