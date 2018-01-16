@@ -19,18 +19,26 @@
     margin-bottom: 5px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 319px) {
     .grid-sizer,
     .grid-item {
-        width: 136px;
+        width: 100%;
         margin-bottom: 5px;
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (min-width: 320px) and (max-width: 640px) {
     .grid-sizer,
     .grid-item {
-        width: 150px;
+        width: 50%;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 960px) {
+    .grid-sizer,
+    .grid-item {
+        width: 33%;
         margin-bottom: 5px;
     }
 }

@@ -228,12 +228,9 @@ function imgs_to_masonry( $atts ){
     $html = <<<HTML
 <style>
     /* PAGE WIDTH */
-    .gk-page {
-        max-width: 90% !important;
-    }
-    @media screen and (max-width: 640px) {
+    @media screen and (min-width: 961px) {
         .gk-page {
-            max-width: 95% !important;
+            max-width: 90% !important;
         }
     }
 </style>
