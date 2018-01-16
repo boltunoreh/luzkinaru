@@ -229,7 +229,7 @@ function imgs_to_masonry( $atts ){
 <style>
     /* PAGE WIDTH */
     .gk-page {
-        max-width: 100% !important;
+        max-width: 90% !important;
     }
 </style>
 <div class="grid">
