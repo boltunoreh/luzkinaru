@@ -231,6 +231,11 @@ function imgs_to_masonry( $atts ){
     .gk-page {
         max-width: 90% !important;
     }
+    @media screen and (max-width: 640px) {
+        .gk-page {
+            max-width: 95% !important;
+        }
+    }
 </style>
 <div class="grid">
     <div class="grid-sizer"></div>
