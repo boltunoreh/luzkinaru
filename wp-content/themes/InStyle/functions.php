@@ -226,6 +226,12 @@ function imgs_to_masonry( $atts ){
     $ids = explode(',', str_replace(' ', '', $params['ids']));
 
     $html = <<<HTML
+<style>
+    /* PAGE WIDTH */
+    .gk-page {
+        max-width: 100% !important;
+    }
+</style>
 <div class="grid">
     <div class="grid-sizer"></div>
 HTML;
