@@ -269,7 +269,8 @@ HTML;
       'imageFadeDuration': 200,
       'resizeDuration': 100,
       'wrapAround': true,
-      'showImageNumberLabel': false
+      'showImageNumberLabel': false,
+      'disableScrolling': true
     })
 </script>
 HTML;
