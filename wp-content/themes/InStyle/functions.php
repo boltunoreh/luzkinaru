@@ -325,7 +325,7 @@ HTML;
             },
             success: function (response) {
                 var items = $($.parseHTML(response));
-                grid.imagesLoaded().progress(function () {
+                items.imagesLoaded().always( function() {
                     grid.append(items).masonry('appended', items);
                     $('#masonry-loader').addClass('display-none');
                     offset = offset + items.length;
