@@ -325,10 +325,12 @@ HTML;
             },
             success: function (response) {
                 var items = $($.parseHTML(response));
-                grid.append(items).masonry('appended', items);
-                $('#masonry-loader').addClass('display-none');
-                offset = offset + items.length;
-                thumbler = false;
+                grid.imagesLoaded().progress(function () {
+                    grid.append(items).masonry('appended', items);
+                    $('#masonry-loader').addClass('display-none');
+                    offset = offset + items.length;
+                    thumbler = false;
+                });
             }
         });
         }
@@ -343,22 +345,6 @@ HTML;
     });
 </script>
 HTML;
-
-    /* DICH! */
-    $html .= <<<HTML
-<div style="visibility: hidden; height: 0">
-HTML;
-
-    foreach ($ids as $id) {
-        $imgUrl = wp_get_attachment_image_url($id, 'medium', false);
-        $html .= '<img src="' . $imgUrl . '">';
-    }
-
-    $html .= <<<HTML
-</div>
-HTML;
-    /* DICH! */
-
     return $html;
 }
 
