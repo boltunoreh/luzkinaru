@@ -283,7 +283,7 @@ HTML;
 
     $html .= <<<HTML
 </div>
-<div id="masonry-loader" class="display-none"><img src="{$loaderSrc}"></div>
+<div id="masonry-loader" class="display-none"><img src="{$loaderSrc}" width="40"></div>
 <script>
     // init Masonry
     var grid = $('.grid').masonry({
