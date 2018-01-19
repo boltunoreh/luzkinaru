@@ -346,7 +346,7 @@ HTML;
 
     /* DICH! */
     $html .= <<<HTML
-<div style="visibility: hidden">
+<div style="visibility: hidden; height: 0">
 HTML;
 
     foreach ($ids as $id) {
