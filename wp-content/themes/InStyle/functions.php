@@ -322,9 +322,6 @@ HTML;
             success: function (response) {
                 var items = $($.parseHTML(response));
                 grid.append(items).masonry('appended', items);
-                grid.imagesLoaded().progress(function () {
-                    grid.masonry('layout');
-                });
                 thumbler = false;
             }
         });
