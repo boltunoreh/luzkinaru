@@ -218,6 +218,39 @@ function portfolio_js_css() {
 }
 add_action( 'wp_enqueue_scripts', 'portfolio_js_css');
 
+// ajax for masonry (WTF??)
+add_action( 'wp_enqueue_scripts', 'masonry_ajax_data', 99 );
+function masonry_ajax_data(){
+    wp_localize_script( 'comment-reply', 'masonry_ajax',
+        array(
+            'url' => admin_url('admin-ajax.php')
+        )
+    );
+}
+
+add_action('wp_ajax_load_masonry', 'load_masonry_callback');
+add_action('wp_ajax_nopriv_load_masonry', 'load_masonry_callback');
+function load_masonry_callback() {
+    $ids_string = $_POST['ids'];
+    $offset = $_POST['offset'];
+    $limit = $_POST['limit'];
+
+    $ids = explode(',', str_replace(' ', '', $ids_string));
+    $html = '';
+
+    for ($i = $offset; $i < $offset + $limit; $i++) {
+        $imgFullsizeUrl = wp_get_attachment_image_url($ids[$i], 'full', false);
+
+        $imgUrl = wp_get_attachment_image_url($ids[$i], 'medium', false);
+
+        $html .= '<div class="grid-item"><a href="' . $imgFullsizeUrl . '" data-lightbox=”portfolio″><img src="' . $imgUrl . '"></a></div>';
+    }
+
+    echo $html;
+
+    wp_die();
+}
+
 function imgs_to_masonry( $atts ){
     $params = shortcode_atts( array(
         'ids' => '',
@@ -234,14 +267,14 @@ function imgs_to_masonry( $atts ){
         }
     }
 </style>
-<div class="grid">
+<div class="grid js__load_on_scroll">
     <div class="grid-sizer"></div>
 HTML;
 
-    foreach ($ids as $id) {
-        $imgFullsizeUrl = wp_get_attachment_image_url($id, 'full', false);
+    for ($i = 0; $i < 20; $i++) {
+        $imgFullsizeUrl = wp_get_attachment_image_url($ids[$i], 'full', false);
 
-        $imgUrl = wp_get_attachment_image_url($id, 'medium', false);
+        $imgUrl = wp_get_attachment_image_url($ids[$i], 'medium', false);
 
         $html .= '<div class="grid-item"><a href="' . $imgFullsizeUrl . '" data-lightbox=”portfolio″><img src="' . $imgUrl . '"></a></div>';
     }
@@ -262,8 +295,7 @@ HTML;
     grid.imagesLoaded().progress(function () {
         grid.masonry();
     });
-</script>
-<script>
+    // init lightbox
     lightbox.option({
       'fadeDuration': 200,
       'imageFadeDuration': 200,
@@ -271,7 +303,39 @@ HTML;
       'wrapAround': true,
       'showImageNumberLabel': false,
       'disableScrolling': true
-    })
+    });
+    // add on scroll down
+    var offset = $(".grid-item").length;
+    var thumbler = false;
+    $('.js__load_on_scroll').on('scrolledToDown', function () {
+        if (false == thumbler) {
+            thumbler = true;
+            $.ajax({
+            type: "POST",
+            url: window.masonry_ajax.url,
+            data: {
+                action: 'load_masonry',
+                ids: '{$params['ids']}',
+                offset: offset,
+                limit: 20
+            },
+            success: function (response) {
+                var items = $($.parseHTML(response));
+                grid.append(items).masonry('appended', items);
+                grid.masonry('layout');
+                thumbler = false;
+            }
+        });
+        }
+    });
+    // add onScrollDown trigger
+    $(window).scroll(function () {
+        $('.js__load_on_scroll').each(function () {
+            if ($(this).offset().top + $(this).innerHeight() <= $(window).scrollTop() + $(window).height()) {
+                $(this).trigger('scrolledToDown');
+            }
+        });
+    });
 </script>
 HTML;
 
