@@ -293,7 +293,7 @@ HTML;
     });
     // layout Masonry after each image loads
     grid.imagesLoaded().progress(function () {
-        grid.masonry();
+        grid.masonry('layout');
     });
     // init lightbox
     lightbox.option({
