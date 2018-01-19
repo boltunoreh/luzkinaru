@@ -322,7 +322,9 @@ HTML;
             success: function (response) {
                 var items = $($.parseHTML(response));
                 grid.append(items).masonry('appended', items);
-                grid.masonry('layout');
+                grid.imagesLoaded().progress(function () {
+                    grid.masonry('layout');
+                });
                 thumbler = false;
             }
         });
