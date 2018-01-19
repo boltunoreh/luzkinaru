@@ -51,6 +51,16 @@
     display: block;
     max-width: 100%;
 }
+.display-none {
+    display: none;
+}
+#masonry-loader {
+    margin: 20px;
+    text-align: center;
+}
+#masonry-loader img {
+    width: 40px;
+}
 
 /* LIGHTBOX */
 .lb-image {

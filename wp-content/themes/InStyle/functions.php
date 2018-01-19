@@ -279,8 +279,11 @@ HTML;
         $html .= '<div class="grid-item"><a href="' . $imgFullsizeUrl . '" data-lightbox=”portfolio″><img src="' . $imgUrl . '"></a></div>';
     }
 
+    $loaderSrc = get_template_directory_uri() . '/images/loader.gif';
+
     $html .= <<<HTML
 </div>
+<div id="masonry-loader" class="display-none"><img src="{$loaderSrc}"></div>
 <script>
     // init Masonry
     var grid = $('.grid').masonry({
@@ -310,6 +313,7 @@ HTML;
     $('.js__load_on_scroll').on('scrolledToDown', function () {
         if (false == thumbler) {
             thumbler = true;
+            $('#masonry-loader').removeClass('display-none');
             $.ajax({
             type: "POST",
             url: window.masonry_ajax.url,
@@ -322,6 +326,8 @@ HTML;
             success: function (response) {
                 var items = $($.parseHTML(response));
                 grid.append(items).masonry('appended', items);
+                $('#masonry-loader').addClass('display-none');
+                offset = offset + items.length;
                 thumbler = false;
             }
         });
