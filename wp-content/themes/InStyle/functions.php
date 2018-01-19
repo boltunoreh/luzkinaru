@@ -344,6 +344,21 @@ HTML;
 </script>
 HTML;
 
+    /* DICH! */
+    $html .= <<<HTML
+<div style="visibility: hidden">
+HTML;
+
+    foreach ($ids as $id) {
+        $imgUrl = wp_get_attachment_image_url($id, 'medium', false);
+        $html .= '<img src="' . $imgUrl . '">';
+    }
+
+    $html .= <<<HTML
+</div>
+HTML;
+    /* DICH! */
+
     return $html;
 }
 
