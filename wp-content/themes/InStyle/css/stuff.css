@@ -105,10 +105,10 @@
 		margin: 0 52px 0 0
 }
 
-.contact-info div {
-                float: none !important;
-text-align: right;
-		margin: 0 0 20px 0;
+.contact-info .contact {
+	float: none !important;
+	text-align: right;
+	margin: 0 0 20px 0;
 }
 
 .page-template-template-contact-php #gk-mainbody-bottom .box {
