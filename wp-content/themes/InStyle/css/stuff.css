@@ -118,7 +118,7 @@
 .happyforms-flex {
 	padding-top: 20px !important;
 }
-.happyforms-part--submit, .happyforms-submit {
+.happyforms-part--submit .happyforms-submit {
 	color: #fff !important;
 }
 
