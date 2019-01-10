@@ -111,6 +111,17 @@
 	margin: 0 0 20px 0;
 }
 
+.happyforms-form {
+	float: left;
+	padding-top: 20px;
+}
+.happyforms-flex {
+	padding-top: 20px;
+}
+.happyforms-submit {
+	color: white !important;
+}
+
 .page-template-template-contact-php #gk-mainbody-bottom .box {
 	border-top: 1px solid #E5E5E5;
 	font-size: 14px;
