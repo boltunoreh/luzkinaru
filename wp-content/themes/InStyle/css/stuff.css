@@ -116,10 +116,10 @@
 	padding-top: 20px;
 }
 .happyforms-flex {
-	padding-top: 20px;
+	padding-top: 20px !important;
 }
-.happyforms-submit {
-	color: white !important;
+.happyforms-part--submit, .happyforms-submit {
+	color: #fff !important;
 }
 
 .page-template-template-contact-php #gk-mainbody-bottom .box {
