@@ -1747,8 +1747,8 @@
 					issuesDOM.sort(function(a, b) {
 						var severityA = $(a).data('issueSeverity');
 						var severityB = $(b).data('issueSeverity');
-						if (severityA < severityB) { return -1; }
-						else if (severityA > severityB) { return 1; }
+						if (severityA > severityB) { return -1; }
+						else if (severityA < severityB) { return 1; }
 
 						var typeA = $(a).data('issueType');
 						var typeB = $(b).data('issueType');
@@ -3294,7 +3294,15 @@
 						}
 					}
 					else {
-						self.colorboxModal((self.isSmallScreen ? '300px' : '400px'), 'Rule Update Failed', 'No rules were updated. Please verify you have permissions to write to the /wp-content/wflogs directory.');
+						if (self.wafData['failure'] == 'ratelimit') {
+							self.colorboxModal((self.isSmallScreen ? '300px' : '400px'), 'Rule Update Failed', 'No rules were updated. Your website has reached the maximum number of rule update requests. Please try again later.');
+						}
+						else if (self.wafData['failure'] == 'unreachable') {
+							self.colorboxModal((self.isSmallScreen ? '300px' : '400px'), 'Rule Update Failed', 'No rules were updated. Please verify your website can reach the Wordfence servers.');
+						}
+						else {
+							self.colorboxModal((self.isSmallScreen ? '300px' : '400px'), 'Rule Update Failed', 'No rules were updated. Please verify you have permissions to write to the /wp-content/wflogs directory.');
+						}
 					}
 					if (typeof onSuccess === 'function') {
 						return onSuccess.apply(this, arguments);
