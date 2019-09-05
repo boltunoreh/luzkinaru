@@ -221,7 +221,7 @@ add_action( 'wp_enqueue_scripts', 'portfolio_js_css');
 // ajax for masonry (WTF??)
 add_action( 'wp_enqueue_scripts', 'masonry_ajax_data', 99 );
 function masonry_ajax_data(){
-    wp_localize_script( 'comment-reply', 'masonry_ajax',
+    wp_localize_script( 'masonry', 'masonry_ajax',
         array(
             'url' => admin_url('admin-ajax.php')
         )
