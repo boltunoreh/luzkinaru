@@ -1040,3 +1040,7 @@ article section table td span.gk-table-label {
 .price-img {
     padding-right: 15px;
 }
+
+a.imageLogo img {
+    padding-top: 15px;
+}
