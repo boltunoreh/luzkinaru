@@ -1,7 +1,7 @@
 <div class="gk-nsp-image-wrap bottom-sticky-posts-widget">
     <h2>
         <a href="{URL}"></a>
-    <h2>
+    </h2>
     <a href="{URL}" title="{TITLE}" class="gk-image-link">
         <img src="{IMAGE_LARGE}" alt="" class="gk-nsp-image">
     </a>
