@@ -1044,3 +1044,25 @@ article section table td span.gk-table-label {
 a.imageLogo img {
     padding-top: 15px;
 }
+
+.bottom-sticky-posts-widget {
+    max-width: 100% !important;
+    max-height: 300px;
+    position: relative;
+}
+
+.bottom-sticky-posts-widget h2 {
+    position: absolute;
+    top: 84px;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+}
+
+.bottom-sticky-posts-widget h2 a {
+    color: #fff;
+    font-size: 27px;
+    font-weight: 300;
+    text-align: center;
+    width: 100%;
+}
